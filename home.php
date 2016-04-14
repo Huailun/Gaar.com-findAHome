@@ -16,8 +16,15 @@
 				  <li>Input data to the website</li>
 			  </ul>
 		</ol>
-		<h1>Entities</h1>
-		  <h2>Porperty location</h2>
+		<h2>Entities</h2>
+		  <ol>
+			  <li>propertyLocation</li>
+			  <li>propertyPaymentHelp</li>
+			  <li>propertyDescription</li>
+			  <li>propertyBasicInformation</li>
+			  <li>propertyRoomInformation</li>
+			  <li>propertyRealtorConnection</li>
+		  </ol>
 
 	</body>
 
