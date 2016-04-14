@@ -8,13 +8,13 @@
 		<a href="http://distil.flexmls.com/cgi-bin/mainmenu.cgi">Original example863535</a>
 		<header><img src="images/gaar.jpg" alt="house" height="200" width="300"/></header>
 		<ol>
-			<li>The persona is potential house buyers & investors</li>
-			<li>The main goal is to give buyers a thorough information of the house they are interested in & provide payment plans also find a realtor.</li>
-			<li>Steps to arriving goal</li>
-				<ul>
+			<p>A. The persona is potential house buyers & investors</p>
+			<p>B. The main goal is to give buyers a thorough information of the house they are interested in & provide payment plans also find a realtor.</p>
+			<p>C. Steps to arriving goal-userCase</p>
+				<ol>
 					<li>Collect information from owner of the house</li>
 				  	<li>Input data to the website</li>
-				</ul>
+				</ol>
 		</ol>
 		<h2>Entities</h2>
 		<h3>...& Attributes of entities</h3>
