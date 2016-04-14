@@ -46,7 +46,18 @@
 						<li>pricePerSquarefeet</li>
 					</ul>
 				<li>propertyRoomInformation</li>
+					<ul>
+						<li>mainLivingArea</li>
+						<li>masterBedroom</li>
+						<li>kitchen</li>
+						<li>diningRoom</li>
+					</ul>
 				<li>propertyRealtorConnection</li>
+					<ul>
+						<li>contact</li>
+						<li>actions</li>
+						<li>requestShowing</li>
+					</ul>
 		</ol>
 
 
