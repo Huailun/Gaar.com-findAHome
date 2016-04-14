@@ -19,7 +19,7 @@
 		<h2>Entities</h2>
 		  <ol>
 			  <li>propertyLocation</li>
-			  <li>propertyPaymentHelp</li>
+			  <li>propertyPaymentTools</li>
 			  <li>propertyDescription</li>
 			  <li>propertyBasicInformation</li>
 			  <li>propertyRoomInformation</li>
