@@ -13,7 +13,7 @@
 			<p>C. Steps to arriving goal-useCase</p>
 				<ol>
 					<li>Buyers open the gaar.com with their computers or mobile phones.</li>
-				  	<li>Input data to the website</li>
+				  	<li>User inputs his/her ideas to search</li>
 				</ol>
 		</ol>
 		<h2>Entities</h2>
