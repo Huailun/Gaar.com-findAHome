@@ -60,7 +60,9 @@
 					</ul>
 		</ol>
 		<h2>Primary key and foreign keys</h2>
-		  <ul>propertyId</ul>
+		  <ul>
+			  <li>propertyId</li>
+		  </ul>
 
 
 	</body>
