@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<a href="http://distil.flexmls.com/cgi-bin/mainmenu.cgi">Original example</a>
-		<img src="images/gaar.jpg"/>
+		<header><img src="images/gaar.jpg"/></header>
 		<ol>
 			<li>The persona is potential house buyers</li>
 
