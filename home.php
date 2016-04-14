@@ -17,7 +17,7 @@
 			  </ul>
 		</ol>
 		<h2>Entities</h2>
-		<h3>        & Entities to their attributes</h3>
+		<h3>...& Entities to their attributes</h3>
 		  <ol>
 			  <li>propertyLocation</li>
 			  <li>propertyPaymentTools</li>
