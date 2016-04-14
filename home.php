@@ -15,8 +15,9 @@
 				  <li>Collect information from owner of the house</li>
 				  <li>Input data to the website</li>
 			  </ul>
-
 		</ol>
+		<h1>Entities</h1>
+		
 
 	</body>
 
