@@ -9,7 +9,7 @@
 		<header><img src="images/gaar.jpg" alt="house" height="200" width="300"/></header>
 		<ol>
 			<li>The persona is potential house buyers & investors</li>
-			<li>The main goal is to give buyers a thorough information of the house they are interested in & provide payment plans and find a real person to help.</li>
+			<li>The main goal is to give buyers a thorough information of the house they are interested in & provide payment plans also find a realtor.</li>
 			<li></li>
 
 		</ol>
