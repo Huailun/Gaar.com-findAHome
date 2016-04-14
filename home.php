@@ -26,7 +26,10 @@
 						<li>propertySize & floorPlan</li>
 					</ul>
 				<li>propertyPaymentTools</li>
-					<ul></ul>
+					<ul>
+						<li>DownPaymentHelp</li>
+						<li>mortgageCalculator</li>
+					</ul>
 			  <li>propertyDescription</li>
 			  <li>propertyBasicInformation</li>
 			  <li>propertyRoomInformation</li>
