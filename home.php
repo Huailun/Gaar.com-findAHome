@@ -19,8 +19,14 @@
 		<h2>Entities</h2>
 		<h3>...& Entities to their attributes</h3>
 		  <ol>
-			  <li>propertyLocation</li>
-			  <li>propertyPaymentTools</li>
+				<li>propertyHighlights</li>
+					<ul>
+						<li>physicalAddress</li>
+						<li>price</li>
+						<li>propertySize & floorPlan</li>
+					</ul>
+				<li>propertyPaymentTools</li>
+					<ul></ul>
 			  <li>propertyDescription</li>
 			  <li>propertyBasicInformation</li>
 			  <li>propertyRoomInformation</li>
