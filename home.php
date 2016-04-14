@@ -31,7 +31,20 @@
 						<li>mortgageCalculator</li>
 					</ul>
 				<li>propertyDescription</li>
+					<ul>
+						<li>propertyFeatures</li>
+						<li>neighborhoodOutlines</li>
+					</ul>
 				<li>propertyBasicInformation</li>
+					<ul>
+						<li>area</li>
+						<li>stories</li>
+						<li>county</li>
+						<li>yearBuilt</li>
+						<li>lotSize</li>
+						<li>onMarketDays</li>
+						<li>pricePerSquarefeet</li>
+					</ul>
 				<li>propertyRoomInformation</li>
 				<li>propertyRealtorConnection</li>
 		</ol>
