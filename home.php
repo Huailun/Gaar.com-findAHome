@@ -25,6 +25,7 @@
 			  <li>propertyRoomInformation</li>
 			  <li>propertyRealtorConnection</li>
 		  </ol>
+		<h3>Entities to their attributes</h3>
 
 	</body>
 
