@@ -11,6 +11,10 @@
 			<li>The persona is potential house buyers & investors</li>
 			<li>The main goal is to give buyers a thorough information of the house they are interested in & provide payment plans also find a realtor.</li>
 			<li>Steps to arriving goal</li>
+			  <ul>
+				  <li>Collect information from owner of the house</li>
+				  <li>Input data to the website</li>
+			  </ul>
 
 		</ol>
 
