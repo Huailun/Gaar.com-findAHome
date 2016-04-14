@@ -17,7 +17,7 @@
 			  </ul>
 		</ol>
 		<h1>Entities</h1>
-		
+		  <h2>Porperty location</h2>
 
 	</body>
 
