@@ -17,6 +17,7 @@
 			  </ul>
 		</ol>
 		<h2>Entities</h2>
+		<h4>Entities to their attributes</h4>
 		  <ol>
 			  <li>propertyLocation</li>
 			  <li>propertyPaymentTools</li>
@@ -25,7 +26,7 @@
 			  <li>propertyRoomInformation</li>
 			  <li>propertyRealtorConnection</li>
 		  </ol>
-		<h3>Entities to their attributes</h3>
+
 
 	</body>
 
