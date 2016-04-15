@@ -26,11 +26,6 @@
 						<li>price</li>
 						<li>propertySize & floorPlan</li>
 					</ul>
-				<li>propertyPaymentTools</li>
-					<ul>
-						<li>DownPaymentHelp</li>
-						<li>mortgageCalculator</li>
-					</ul>
 				<li>propertyInteriorAndExterior</li>
 					<ul>
 						<li>area</li>
