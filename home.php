@@ -31,11 +31,6 @@
 						<li>DownPaymentHelp</li>
 						<li>mortgageCalculator</li>
 					</ul>
-				<li>propertyDescription</li>
-					<ul>
-						<li>propertyFeatures</li>
-						<li>neighborhoodOutlines</li>
-					</ul>
 				<li>propertyBasicInformation</li>
 					<ul>
 						<li>area</li>
