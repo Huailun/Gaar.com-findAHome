@@ -38,10 +38,9 @@
 					</ul>
 				<li>propertyContactInformation</li>
 					<ul>
-						<li>mainLivingArea</li>
-						<li>masterBedroom</li>
-						<li>kitchen</li>
-						<li>diningRoom</li>
+						<li>printPdf</li>
+						<li>requestAShowing</li>
+						<li>shareOrSave</li>
 					</ul>
 				<li>propertyConnection</li>
 					<ul>
