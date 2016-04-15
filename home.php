@@ -31,7 +31,7 @@
 						<li>DownPaymentHelp</li>
 						<li>mortgageCalculator</li>
 					</ul>
-				<li>propertyBasicInformation</li>
+				<li>propertyInteriorAndExterior</li>
 					<ul>
 						<li>area</li>
 						<li>stories</li>
@@ -41,7 +41,7 @@
 						<li>onMarketDays</li>
 						<li>pricePerSquarefeet</li>
 					</ul>
-				<li>propertyRoomInformation</li>
+				<li>propertyContactInformation</li>
 					<ul>
 						<li>mainLivingArea</li>
 						<li>masterBedroom</li>
