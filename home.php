@@ -48,9 +48,9 @@
 						<li>kitchen</li>
 						<li>diningRoom</li>
 					</ul>
-				<li>propertyRealtorConnection</li>
+				<li>propertyConnection</li>
 					<ul>
-						<li>contact</li>
+						<li>contactRealtor</li>
 						<li>actions</li>
 						<li>requestShowing</li>
 					</ul>
