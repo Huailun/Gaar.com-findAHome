@@ -10,4 +10,6 @@ CREATE TABLE property (
 );
 CREATE TABLE inquiry (
 	buyerEmail INT UNSIGNED AUTO_INCREMENT NOT NULL,
+	buyerName VARCHAR(128) NOTNULL,
+	buyerInput VARCHAR(256),
 )
