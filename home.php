@@ -25,16 +25,16 @@
 						<li>physicalAddress</li>
 						<li>price</li>
 						<li>propertySize & floorPlan</li>
+						<li>county</li>
 					</ul>
 				<li>propertyInterior</li>
 					<ul>
 						<li>area</li>
 						<li>stories</li>
-						<li>county</li>
 						<li>yearBuilt</li>
 						<li>lotSize</li>
 						<li>onMarketDays</li>
-						<li>pricePerSquarefeet</li>
+						<li>pricePerSquareFeet</li>
 					</ul>
 				<li>requestAShowing</li>
 					<ul>
