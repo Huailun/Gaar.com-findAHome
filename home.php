@@ -26,7 +26,7 @@
 						<li>price</li>
 						<li>propertySize & floorPlan</li>
 					</ul>
-				<li>propertyInteriorAndExterior</li>
+				<li>propertyInterior</li>
 					<ul>
 						<li>area</li>
 						<li>stories</li>
