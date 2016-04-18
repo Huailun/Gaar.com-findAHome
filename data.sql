@@ -10,6 +10,9 @@ CREATE TABLE property (
 );
 CREATE TABLE inquiry (
 	buyerEmail INT UNSIGNED AUTO_INCREMENT NOT NULL,
-	buyerName VARCHAR(128) NOTNULL,
-	buyerInput VARCHAR(256),
-)
+	buyerName  VARCHAR(128)                NOT NULL,
+	buyerInput VARCHAR(256)                NOT NULL,
+	INDEX (propertyId),
+	FOREIGN KEY (propertyId) REFERENCES property (propertyId),
+	PRIMARY KEY (buyerEmail)
+);
