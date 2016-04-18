@@ -3,7 +3,10 @@ DROP TABLE IF EXISTS inquiry;
 
 CREATE TABLE property (
 	propertyId INT UNSIGNED AUTO_INCREMENT NOT NULL,
-
+	address VARCHAR(128) NOT NULL,
+	squareFeet CHAR(4),
+	floorPlan CHAR(4),
+	PRIMARY KEY(propertyId)
 );
 CREATE TABLE inquiry (
 	buyerEmail INT UNSIGNED AUTO_INCREMENT NOT NULL,
