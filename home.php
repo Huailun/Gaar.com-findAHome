@@ -14,7 +14,8 @@
 				<ol>
 					<li>Buyers open the gaar.com with their computers or mobile phones.</li>
 				  	<li>User inputs his/her ideas to search for a house</li>
-					<li>User clicks on their favorite from his/her search result</li>
+					<li>User clicks on the result from his/her search</li>
+					<li>User inquires information for his/her favorite search result</li>
 				</ol>
 		</ol>
 		<h2>Entities</h2>
