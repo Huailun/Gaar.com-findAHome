@@ -36,17 +36,12 @@
 						<li>onMarketDays</li>
 						<li>pricePerSquarefeet</li>
 					</ul>
-				<li>propertyContactInformation</li>
+				<li>requestAShowing</li>
 					<ul>
-						<li>printPdf</li>
-						<li>requestAShowing</li>
-						<li>shareOrSave</li>
-					</ul>
-				<li>propertyConnection</li>
-					<ul>
-						<li>contactRealtor</li>
-						<li>actions</li>
-						<li>requestShowing</li>
+						<li>name</li>
+						<li>email</li>
+						<li>message</li>
+						<li>sendInquiry</li>
 					</ul>
 		</ol>
 		<h2>Primary key and foreign keys</h2>
