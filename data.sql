@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS property;
+DROP TABLE IF EXISTS inquiry;
+DROP TABLE IF EXISTS propertyId;
+
+CREATE TABLE porperty (
+
+)
