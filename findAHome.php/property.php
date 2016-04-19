@@ -14,4 +14,24 @@ class Property implements \JsonSerializable {
 	 * @var int $propertyId
 	 **/
 	private $propertyId;
+	/**
+	 * price for this property
+	 * @var int $price
+	 **/
+	private $price;
+	/**
+	 * the interior squareFeet of this property
+	 * @var int $squareFeet
+	 **/
+	private $squareFeet;
+	/**
+	 * physical address of this property
+	 * @var string $address
+	 **/
+	private $address;
+	/**
+	 * numbers of bedrooms and bathrooms inside this property, the floor plan.
+	 * @var string $floorPlan
+	 **/
+	private $floorPlan;
 }
