@@ -89,5 +89,26 @@ class Property implements \JsonSerializable {
 		// convert and store the price
 		$this->price = $newPrice;
 	}
-	
+	/**
+	 * accessor method for the square feet of the property associated with this property id
+	 *
+	 * @return int value of the square feet of the property
+	 **/
+	public function getSquareFeet() {
+		return ($this->squareFeet);
+	}
+	/** mutator method for square feet
+	 *
+	 *@param int $newPrice new value of price
+	 *@throws \RangeException if $newSquareFeet is not positive
+	 *@throws \TypeError if $newSquareFeet is not an integer
+	 **/
+	public function setSquareFeet($squareFeet) {
+		//verify the squar feet is positive
+		if($newSquareFeet <= 0){
+			throw(new \RangeException("squareFeet is not positive"));
+		}
+		//convert and store the square feet
+		$this->squareFeet = $newSquareFeet;
+	}
 }
