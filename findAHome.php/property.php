@@ -131,6 +131,15 @@ class Property implements \JsonSerializable {
 		//verify the address is secure
 		$newAddress = trim($newAddress);
 		$newAddress = filter_var($newAddress, FILTER_SANITIZE_STRING);
-		$this->address = $address;
+		if(empty($newAddress) === true){
+			throw(new \InvalidArgumentException("address is empty or insecure"));
+		}
+		//verify the address  will fit in the database
+		if(strlen($newAddress) > 64) {
+			throw(new \RangeException("address is too large"));
+		}
+
+		//store the new address
+		$this->address = $newAddress;
 	}
 }
