@@ -66,4 +66,28 @@ class Property implements \JsonSerializable {
 		//convert and sotre the property id
 		$this->propertyId = $newPropertyId;
 	}
+	/**
+	 * accessor method for price
+	 *
+	 * @return int value of the price of the property associated with this property id
+	 **/
+	public function getPrice() {
+		return($this->price);
+	}
+	/**
+	 * mutator method for price
+	 *
+	 * @param int $newPrice new value of price
+	 * @throws \RangeException if $newPrice is not positive
+	 * @throws \TypeError if $newPrice is not an integer
+	 **/
+	public function setPrice(int $newPrice) {
+		//verify the price is positive
+		if($newPrice <= 0) {
+			throw(new \RangeException("price is not positive"));
+		}
+		// convert and store the price
+		$this->price = $newPrice;
+	}
+	
 }
