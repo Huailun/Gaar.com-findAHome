@@ -34,18 +34,20 @@ class Property implements \JsonSerializable {
 	 * @var string $floorPlan
 	 **/
 	private $floorPlan;
+
 	/**
 	 * accesor method for property id
-	 * 
+	 *
 	 * @return int/null value of property id
 	 **/
 	public function getPropertyId() {
-		return($this->propertyId);
+		return ($this->propertyId);
 	}
+
 	/**
 	 * mutator method for property id
-	 * 
-	 * @param int/null $newPropertyId new value of property id
+	 *
+	 * @param int /null $newPropertyId new value of property id
 	 * @throws \RangeExcep if $newPropertyId is not positive
 	 * @throws \TypeError if $newPropertyId is not an integer
 	 **/
@@ -55,12 +57,13 @@ class Property implements \JsonSerializable {
 			$this->propertyId = null;
 			return;
 		}
-		
+
 		//verify the property id is positive
 		if($newPropertyId <= 0) {
 			throw(new \RangeException("property id is not positive"));
 		}
-		
+
 		//convert and sotre the property id
 		$this->propertyId = $newPropertyId;
+	}
 }
