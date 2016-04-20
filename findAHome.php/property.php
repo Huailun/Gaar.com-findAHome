@@ -90,9 +90,9 @@ class Property implements \JsonSerializable {
 		$this->price = $newPrice;
 	}
 	/**
-	 * accessor method for the square feet of the property associated with this property id
+	 * accessor method for square feet of the property
 	 *
-	 * @return int value of the square feet of the property
+	 * @return int value of square feet of the property
 	 **/
 	public function getSquareFeet() {
 		return ($this->squareFeet);
@@ -113,6 +113,7 @@ class Property implements \JsonSerializable {
 	}
 	/**
 	 * accessor method for address
-	 * 
+	 *
+	 * @return string value of physical address of property
 	 */
 }
