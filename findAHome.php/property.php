@@ -69,7 +69,7 @@ class Property implements \JsonSerializable {
 	/**
 	 * accessor method for price
 	 *
-	 * @return int value of the price of the property associated with this property id
+	 * @return int/null value of price of the property
 	 **/
 	public function getPrice() {
 		return($this->price);
@@ -77,11 +77,11 @@ class Property implements \JsonSerializable {
 	/**
 	 * mutator method for price
 	 *
-	 * @param int $newPrice new value of price
+	 * @param int/null $newPrice new value of price
 	 * @throws \RangeException if $newPrice is not positive
 	 * @throws \TypeError if $newPrice is not an integer
 	 **/
-	public function setPrice(int $newPrice) {
+	public function setPrice(int $newPrice = null) {
 		//verify the price is positive
 		if($newPrice <= 0) {
 			throw(new \RangeException("price is not positive"));
@@ -115,5 +115,16 @@ class Property implements \JsonSerializable {
 	 * accessor method for address
 	 *
 	 * @return string value of physical address of property
-	 */
+	 **/
+	public function getAddress() {
+		return ($this->address);
+	}
+	/**
+	 * mutator method for tweet content
+	 *
+	 * @param string &newAddress new value of property address
+	 * @throws \InvalidArgumentException if $newAddress is not a string or insecure
+	 * @throws \RangeException if $newAddress is > 64 characters
+	 * @throws \TypeError if $newAddress is not a string
+	 **/
 }
