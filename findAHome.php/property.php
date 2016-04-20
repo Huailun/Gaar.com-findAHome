@@ -127,4 +127,10 @@ class Property implements \JsonSerializable {
 	 * @throws \RangeException if $newAddress is > 64 characters
 	 * @throws \TypeError if $newAddress is not a string
 	 **/
+	public function setAddress(string $newAddress) {
+		//verify the address is secure
+		$newAddress = trim($newAddress);
+		$newAddress = filter_var($newAddress, FILTER_SANITIZE_STRING);
+		$this->address = $address;
+	}
 }
