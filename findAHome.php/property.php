@@ -48,10 +48,10 @@ class Property implements \JsonSerializable {
 	 * mutator method for property id
 	 *
 	 * @param int /null $newPropertyId new value of property id
-	 * @throws \RangeExcep if $newPropertyId is not positive
+	 * @throws \RangeException if $newPropertyId is not positive
 	 * @throws \TypeError if $newPropertyId is not an integer
 	 **/
-	public function setPropertyId(int $propertyId = null) {
+	public function setPropertyId(int $newPropertyId = null) {
 		// base case: if the property id is null, this is a new property without a mySQL assigned id (yet)
 		if($newPropertyId === null) {
 			$this->propertyId = null;
@@ -103,7 +103,7 @@ class Property implements \JsonSerializable {
 	 *@throws \RangeException if $newSquareFeet is not positive
 	 *@throws \TypeError if $newSquareFeet is not an integer
 	 **/
-	public function setSquareFeet($squareFeet) {
+	public function setSquareFeet(int $newSquareFeet) {
 		//verify the squar feet is positive
 		if($newSquareFeet <= 0){
 			throw(new \RangeException("squareFeet is not positive"));
@@ -111,4 +111,8 @@ class Property implements \JsonSerializable {
 		//convert and store the square feet
 		$this->squareFeet = $newSquareFeet;
 	}
+	/**
+	 * accessor method for address
+	 * 
+	 */
 }
