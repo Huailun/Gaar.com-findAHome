@@ -39,8 +39,27 @@ class Property implements \JsonSerializable {
 	 * constructor for this property
 	 *
 	 * @param int/null $newProperty id of this Property or null if a new Property
-	 * @param int $newPropertyId of
-	 */
+	 * @param int $newPrice the price of property
+	 * @param int $newSquareFeet square feet of property
+	 * @param string $newAddress string containing physical address of property
+	 * @param string $newFloorPlan string containing the numbers of bedrooms and bathrooms inside property
+	 * @throws \InvalidArgumentException if data types are not valid
+	 * @throws \RangeException if data values are out of bounds (e.g., strings too long, negative integers)
+	 * @throws \TypeError if data types violate type hints
+	 * @throws \Exception if some other exception occurs
+	 **/
+	public function __construct(int $newPropertyId = null, int $newPrice, int $newSquareFeet, string $newAddress, string $newFloorPlan = null) {
+		try{
+			$this->setPropertyId($newPropertyId);
+			$this->setPrice($newPrice);
+			$this->setsquareFeet($newSquareFeet);
+			$this->setAddress($newAddress);
+			$this->setFloorPlan($newFloorPlan);
+		}catch(\InvalidArgumentException $invalidArgument){
+			//rethrow the exception to the caller
+		}
+	}
+
 	/**
 	 * accesor method for property id
 	 *
@@ -156,4 +175,12 @@ class Property implements \JsonSerializable {
 	public function getFloorPlan() {
 		return ($this->floorPlan);
 	}
+	/**
+	 * mutator method for floor plan
+	 *
+	 * @param string %newFloorPlan new value of the number of bedrooms and bathrooms
+	 * @throws \InvalidArgumentException if $newFloorPlan is not a string or insecure
+	 * @throws \RangeException if $newFloorPlan is > 20 characters
+	 * @throws \TypeError if $newFloorPlan is not a string
+	 **/
 }
