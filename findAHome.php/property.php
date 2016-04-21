@@ -183,4 +183,30 @@ class Property implements \JsonSerializable {
 	 * @throws \RangeException if $newFloorPlan is > 20 characters
 	 * @throws \TypeError if $newFloorPlan is not a string
 	 **/
+	public function setFloorPlan(string $newFloorPlan) {
+		// verify the floor plan is secure
+		$newFloorPlan = trim($newFloorPlan);
+		$newFloorPlan = filter_var($newFloorPlan, FILTER_SANITIZE_STRING);
+		if(empty($newFloorPlan) === true){
+			throw(new \InvalidArgumentException("floor plan is empty or insecure"));
+		}
+
+		//verify the floor plan will fit in the database
+		if(strlen($newFloorPlan) > 20){
+			throw(new \RangeException("floor plan too large"))
+		}
+
+		// store the floor plan
+		$this->floorPlan = $newFloorPlan;
+	}
+	/**
+	 * formats the state variables for JSON serialization
+	 *
+	 * @return array resulting state variables to serialize
+	 **/
+	public function jsonSerialize() {
+		// TODO: Implement jsonSerialize() method.
+		$fields = get_object_vars($this);
+		return($fields);
+	}
 }
