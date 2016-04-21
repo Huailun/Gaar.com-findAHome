@@ -9,10 +9,10 @@ namespace Edu\Cnm\eliu1\DataDesign;
  * @author Ellen Liu <eliu1@cnm.edu>
  */
 class Property implements \JsonSerializable {
-	/**
-	 * id for this property; this is the primary key
-	 * @var int $propertyId
-	 **/
+/**
+ * id for this Property; this is the primary key
+ * 	@var int $propertyId
+**/
 	private $propertyId;
 	/**
 	 * price for this property
@@ -35,6 +35,12 @@ class Property implements \JsonSerializable {
 	 **/
 	private $floorPlan;
 
+	/**
+	 * constructor for this property
+	 *
+	 * @param int/null $newProperty id of this Property or null if a new Property
+	 * @param int $newPropertyId of
+	 */
 	/**
 	 * accesor method for property id
 	 *
@@ -141,5 +147,13 @@ class Property implements \JsonSerializable {
 
 		//store the new address
 		$this->address = $newAddress;
+	}
+	/**
+	 * accessor method for floor plan
+	 *
+	 * @return string value of floor plan
+	 **/
+	public function getFloorPlan() {
+		return ($this->floorPlan);
 	}
 }
