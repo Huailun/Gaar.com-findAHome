@@ -213,7 +213,12 @@ class Property implements \JsonSerializable {
 		}
 
 		// create query template
-		
+		$query = "INSERT INTO property(price, squareFeet, address, floorPlan) VALUES(:price, :squareFeet, :address, :floorPlan)";
+		$statement = $pdo->prepare($query);
+
+		// bind the member variables to the place holders in the template
+		$parameters = ["price" => $this->price, "squareFeet" => $this-> squareFeet, "address" => $this->address, "floorPlan"=> $this->floorPlan ];
+		$statement->execute($parameters);
 	}
 	/**
 	 * formats the state variable s for JSON serialization
