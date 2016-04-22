@@ -200,12 +200,23 @@ class Property implements \JsonSerializable {
 		$this->floorPlan = $newFloorPlan;
 	}
 	/**
+	 * inserts this Property into mySQL
+	 *
+	 * @param \PDO $pdo PDO connection object
+	 * @throws \PDOException when mySQL related errors occur
+	 * @throws \TypeError if $pdo is not a PDO connection object
+	 **/
+	public function insert(\pdo $pdo) {
+		// enforce the property Id is null (i.e., don't insert a property that already exists)
+		
+	}
+	/**
 	 * formats the state variables for JSON serialization
 	 *
 	 * @return array resulting state variables to serialize
 	 **/
 	public function jsonSerialize() {
-		// TODO: Implement jsonSerialize() method.
+		//  TODO: Implement jsonSerialize() method.
 		$fields = get_object_vars($this);
 		return($fields);
 	}
