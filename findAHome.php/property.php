@@ -211,6 +211,8 @@ class Property implements \JsonSerializable {
 		if($this->propertyId !== null){
 			throw(new \PDOException("not a new property"));
 		}
+
+		// create query template
 		
 	}
 	/**
