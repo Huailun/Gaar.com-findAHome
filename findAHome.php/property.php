@@ -208,7 +208,7 @@ class Property implements \JsonSerializable {
 	 **/
 	public function insert(\pdo $pdo) {
 		// enforce the property Id is null (i.e., don't insert a property that already exists)
-		
+
 	}
 	/**
 	 * formats the state variables for JSON serialization
@@ -216,7 +216,6 @@ class Property implements \JsonSerializable {
 	 * @return array resulting state variables to serialize
 	 **/
 	public function jsonSerialize() {
-		//  TODO: Implement jsonSerialize() method.
 		$fields = get_object_vars($this);
 		return($fields);
 	}
