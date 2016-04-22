@@ -252,7 +252,16 @@ class Property implements \JsonSerializable {
 	 @throws \PDOException when mySQL related errors occur
 	 @throws \TypeError if $pdo is not a PDO connection object
 	 **/
-	
+	public function update(\PDO $pdo){
+		// enforce the tweet Id is not null (i.e., don't update a property that has not been inserted)
+		if($this->propertyId === null){
+			throw(new \PDOException("unable to update a tweet that does not exist"));
+		}
+
+		//create query template
+		$query = "UPDATE property SET price = :price, squareFeet = :squareFeet, address = :address, floorPlan = :floorPlan WHERE propertyId = :propertyId";
+		$statement = $pdo->prepare($query);
+	}
 	/**
 	 * formats the state variable s for JSON serialization
 	 *
