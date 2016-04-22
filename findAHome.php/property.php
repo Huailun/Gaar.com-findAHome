@@ -208,10 +208,13 @@ class Property implements \JsonSerializable {
 	 **/
 	public function insert(\pdo $pdo) {
 		// enforce the property Id is null (i.e., don't insert a property that already exists)
-
+		if($this->propertyId !== null){
+			throw(new \PDOException("not a new property"));
+		}
+		
 	}
 	/**
-	 * formats the state variables for JSON serialization
+	 * formats the state variable s for JSON serialization
 	 *
 	 * @return array resulting state variables to serialize
 	 **/
