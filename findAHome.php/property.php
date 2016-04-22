@@ -236,10 +236,23 @@ class Property implements \JsonSerializable {
 		if($this->propertyId === null){
 			throw(new \PDOException("unable to delete a tweet that does not exist"));
 		}
+		// create query template
+		$query = "DELETE FROM property WHERE propertyId = :propertyId";
+		$statement = $pdo->prepare($query);
 
-		//creat
-
+		//bind the member variables to the place holder in the template
+		$parameters = ["propertyId" => $this->propertyId];
+		$statement->execute($parameters);
 	}
+
+	/**
+	 * updates this property in mySQL
+
+	 @param \PDO $pdo PDO connection object
+	 @throws \PDOException when mySQL related errors occur
+	 @throws \TypeError if $pdo is not a PDO connection object
+	 **/
+	
 	/**
 	 * formats the state variable s for JSON serialization
 	 *
