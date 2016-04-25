@@ -274,7 +274,12 @@ class Property implements \JsonSerializable {
 	 * @return \ SplFixedArray SplFIxedArray of property found
 	 * @throws \ PDOException when mySQL related errors occur
 	 * @throws \TypeError when variables are not the correct data type
-	/**
+	 **/
+	public static function getPropertyByaddress(\PDO $pdo, string $address)
+	{
+		//sanitize the description before searching
+		
+	}	/**
 	 * formats the state variable s for JSON serialization
 	 *
 	 * @return array resulting state variables to serialize
