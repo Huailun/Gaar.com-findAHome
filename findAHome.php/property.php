@@ -261,7 +261,19 @@ class Property implements \JsonSerializable {
 		//create query template
 		$query = "UPDATE property SET price = :price, squareFeet = :squareFeet, address = :address, floorPlan = :floorPlan WHERE propertyId = :propertyId";
 		$statement = $pdo->prepare($query);
-	}
+
+		//bind the member variables to the place holders in the template
+		$parameters = ["price" => $this->price, "squareFeet" => $this->squareFeet, "address" => $this->address, "floorPlan" => $this->floorPlan, "propertyId" => $this->propertyId];
+		$statement->execute($parameters);
+	}\
+	/**
+	 * gets the Property by address
+	 *
+	 * @param \PDO $pdo PDO connection object
+	 * @param string $address address to search for
+	 * @return \ SplFixedArray SplFIxedArray of property found
+	 * @throws \ PDOException when mySQL related errors occur
+	 * @throws \TypeError when variables are not the correct data type
 	/**
 	 * formats the state variable s for JSON serialization
 	 *
