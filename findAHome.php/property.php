@@ -278,7 +278,9 @@ class Property implements \JsonSerializable {
 	public static function getPropertyByaddress(\PDO $pdo, string $address)
 	{
 		//sanitize the description before searching
-		
+		$address = trim($address);
+			throw(new \PDOException("address is invalid"));
+		}
 	}	/**
 	 * formats the state variable s for JSON serialization
 	 *
