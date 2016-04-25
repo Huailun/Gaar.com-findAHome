@@ -287,8 +287,74 @@ class Property implements \JsonSerializable {
 		$query = "SELECT propertyId, address, squareFeet, address, floorPlan FROM property WHERE address LIKE :address";
 		$statement = $pdo->prepare($query);
 
+		//bind the address to the place holders in the template
+		$address = "%$address%";
+		$parameters = array("address" => $address);
+		$statement->execute($parameters);
 
-	}	/**
+		//build an array of tweets
+		$properties = new \SplFixedArray($statement->rowCount());
+		$statement->setFetchMode(\PDO::FETCH_ASSOC);
+		while(($row = $statement->fetch() !== false){
+			try {
+					$property = new property($row["propertyId"], $row["price"], $row["squareFeet"], $row["address"], $row["floorPlan"]);
+					$properties[$properties->key()] = $property;
+					$properties->next();
+			}	catch(\Exception $exception){
+					//if the row couldn't be converted, rethrow it
+					throw(new \PDOException($exception->getMessage(), 0, $exception));
+			}
+		}
+
+		/**
+		 * gets the property by propertyId
+		 *
+		 * @param \PDO $pdo PDO connection object
+		 * @param int $propertyId property id to search for
+		 * @return Property/null Property found or null if not found
+		 * @throws \PDOException when mySQL related errors occur
+		 * @throws \TypeError when variables are not the correct data type
+		 **/
+		public static function getPropertyByPropertyId(\PDO $pdo, int $propertyId){
+		//sanitize the propertyId before searching
+		if($propertyId <= 0){
+			throw(new \PDOException("property id is not positive"));
+		}
+
+		//create query template
+		$query = "SELECT propertyId, price, squareFeet, address, floorPlan FROM property WHERE propertyId = :propertyId";
+		$statement = $pdo->prepare($query);
+
+		//grab the property from mySQL
+		try{
+			$property = null;
+			$statement->setFetchMode(\PDO::FETCH_ASSOC);
+			$row = $statement->fetch();
+			if($rows !== false){
+				$property = new property($row["propertyId"], $row["price"], $row["squareFeet"], $row["address"], $row["floorPlan"]);
+			}
+		}catch(\Exception $exception){
+			// if the row couldn't be converted, rethrow it
+			throw(new \PDOException($exception->getMessage(), 0, $exception));
+		}
+		return($property);
+	}
+
+		/**
+		 * gets all Properties
+		 *
+		 * @param \PDO $pdo PDO connection object
+		 * @return \SplFixedArray SplFixedArray of properties found or null
+		 * @throws \PDOException when mySQL related errors occur
+		 * @throws \TypeError when variables are not the correct data type
+		 **/
+		public static function getAllProperties(\PDO $pdo){
+			// create query template
+		$query = "SELECT propertyId, price, squareFeet, address, floorPlan FROM property";
+		$statement = $pdo->prepare($query);
+		$statement->execute();
+	}
+		/**
 	 * formats the state variable s for JSON serialization
 	 *
 	 * @return array resulting state variables to serialize
