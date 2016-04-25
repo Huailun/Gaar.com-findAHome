@@ -279,8 +279,15 @@ class Property implements \JsonSerializable {
 	{
 		//sanitize the description before searching
 		$address = trim($address);
+		if(empty($address) === true){
 			throw(new \PDOException("address is invalid"));
 		}
+
+		//create query template
+		$query = "SELECT propertyId, address, squareFeet, address, floorPlan FROM property WHERE address LIKE :address";
+		$statement = $pdo->prepare($query);
+
+
 	}	/**
 	 * formats the state variable s for JSON serialization
 	 *
